@@ -64,3 +64,6 @@ jobs:
           operation: compress
           files: dist
           outPath: ./dist.tgz
+      - name: upload file to artifactory
+        run: |
+          jf rt upload  dist.tgz /bptmounika/aptgeo/
