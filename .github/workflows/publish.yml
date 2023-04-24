@@ -1,7 +1,7 @@
 # This workflow is designed to allow the build of multiple artifacts and the subsequent upload to pypi.
 # Each build step installs the dist and runs tests with pytest --pyargs
 
-name: Publish
+name: Build
 
 on:
   release:
