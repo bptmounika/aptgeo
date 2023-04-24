@@ -37,11 +37,16 @@ jobs:
         with:
           name: dist
           path: ./dist
-      - name: Setup JFrog CLI for integration
-        uses: jfrog/setup-jfrog-cli@v3
-        env:
-          JF_URL: ${{ secrets.INSIGHT_CENTER_FRONTEND_SITE_JFROG_URL }}
-          JF_ACCESS_TOKEN: ${{ secrets.INSIGHT_CENTER_FRONTEND_SITE_JFROG_TOKEN }}
-      - name: validate connectivity with jfrog server
+#       - name: Setup JFrog CLI for integration
+#         uses: jfrog/setup-jfrog-cli@v3
+#         env:
+#           JF_URL: ${{ secrets.INSIGHT_CENTER_FRONTEND_SITE_JFROG_URL }}
+#           JF_ACCESS_TOKEN: ${{ secrets.INSIGHT_CENTER_FRONTEND_SITE_JFROG_TOKEN }}
+#       - name: validate connectivity with jfrog server
+#         run: |
+#           jf rt ping
+      - name: validate all input
         run: |
-          jf rt ping
+          pwd
+          ls 
+          cd dist
